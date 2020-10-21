@@ -1,11 +1,11 @@
-Ext.define('App.view.righcharts.WinRighCharts2', {
+Ext.define('App.view.highcharts.WinHighCharts2', {
     extend: 'Ext.window.Window',
-    xtype: 'WinRighCharts2',
-    id: 'WinRighCharts2',
+    xtype: 'winhighcharts2',
+    id: 'winhighcharts2',
     height: Ext.getBody().getHeight() * 0.8,
     width: Ext.getBody().getWidth() * 0.9,
     requires: [ 
-        'App.view.righcharts.ContainerRighCharts'
+        'App.view.highcharts.ContainerHighCharts2'
     ],
     layout: 'fit',
     title: 'New win',
@@ -13,7 +13,7 @@ Ext.define('App.view.righcharts.WinRighCharts2', {
     maximizable: true,
     items: [
         {
-            xtype: 'tradingchart'
+            xtype: 'tradingchart2'
         }
     ]
      

@@ -11,7 +11,7 @@ Ext.define('App.controller.ApplicationController', {
 
     routes: {
         'home': { action: 'nfestoqueAction' },
-        'righcharts': { action: 'righchartsAction' },
+        'highcharts': { action: 'highchartsAction' },
         'tree': { action: 'treeAction' }
     },
     
@@ -23,7 +23,7 @@ Ext.define('App.controller.ApplicationController', {
         var me = this;
 
         // Se não tiver logado
-        me.mainAction();
+        // me.mainAction();
     },
     
     mainAction: function(){
@@ -36,15 +36,14 @@ Ext.define('App.controller.ApplicationController', {
         var me = this,
             viewport = me.getViewport();
     },
-    righchartsAction: function(){
+    highchartsAction: function(){
         var me = this,
             viewport = me.getViewport();
-
+        
         viewport.add({
-            xtype: 'righchartsmain'
+            xtype: 'highchartsmain'
         });
 
-        // console.log(righcharts);
     },
     treeAction: function(){
         var me = this,
@@ -54,7 +53,6 @@ Ext.define('App.controller.ApplicationController', {
             xtype: 'treemain'
         });
 
-        // console.log(righcharts);
     },
     
     nfestoqueAction: function(){

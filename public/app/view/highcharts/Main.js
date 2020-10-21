@@ -1,21 +1,20 @@
-Ext.define('App.view.righcharts.Main', {
+Ext.define('App.view.highcharts.Main', {
     extend: 'Ext.panel.Panel',
-    xtype: 'righchartsmain',
-    id: 'righchartsmain',
-    itemId: 'righchartsmain',
+    xtype: 'highchartsmain',
+    // id: 'highchartsmain',
+    itemId: 'highchartsmain',
     requires: [
-        'App.view.righcharts.WinRighCharts',
-        'App.view.righcharts.WinRighCharts2'
+        'App.view.highcharts.WinHighCharts',
+        'App.view.highcharts.WinHighCharts2',
+        'App.view.highcharts.WinHighCharts3'
     ],
-    title: 'Panel RighCharts',
+    title: 'Panel HighCharts',
     layout: 'border',
     items: [
         {
             xtype: 'panel',
-            id:'panelcenter',
             itemId: 'panelcenter',
             layout: 'fit',
-            // title: 'RighCharts',
             region:'center',
             margin: '0 0 0 0',
             items:[
@@ -29,10 +28,10 @@ Ext.define('App.view.righcharts.Main', {
                             margin: '1 1 1 10',
                             handler: function(form) {
 
-                                var objWindow = Ext.getCmp('WinRighCharts2');
+                                var objWindow = Ext.getCmp('winhighcharts3');
 
                                 if(!objWindow){
-                                    objWindow = Ext.create( 'App.view.righcharts.WinRighCharts2');
+                                    objWindow = Ext.create( 'App.view.highcharts.WinHighCharts3');
                                     objWindow.show();
                                 }
         

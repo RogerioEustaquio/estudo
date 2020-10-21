@@ -1,17 +1,17 @@
-Ext.define('App.view.tree.treeGrid',{
+Ext.define('App.view.dsh-pvd.TreeGrid',{
     extend: 'Ext.tree.Panel',
     xtype: 'treegrid',
-    id: 'treegrid',
-    // title: 'Simple Tree2',
-    // width: 200,
-    // height: 200,
+    itemId: 'treegrid',
     rootVisible: false,
     constructor: function() {
         var me = this;
+        var utilFormat = Ext.create('Ext.ux.util.Format');
 
         var myModel = Ext.create('Ext.data.TreeModel', {
                             fields: [ { name: 'grupo', type: 'string'},
-                                      { name: 'qtde', type: 'int'}
+                                      { name: 'rol', type: 'number'},
+                                      { name: 'lb', type: 'number'},
+                                      { name: 'mb', type: 'number'}
                                     ]
                         });
 
@@ -20,7 +20,7 @@ Ext.define('App.view.tree.treeGrid',{
             autoLoad: true,
             proxy: {
                 type: 'ajax',
-                url: BASEURL + '/api/Tree/listarNfEstoque',
+                url: BASEURL + '/api/dshpvd/listartreepvd',
                 encode: true,
                 reader: {
                     type: 'json',
@@ -50,9 +50,28 @@ Ext.define('App.view.tree.treeGrid',{
                     
                 },
                 {
-                    text: 'Qt. Mes',
-                    dataIndex: 'qtde',
-                    align: 'center'
+                    text: 'ROL',
+                    dataIndex: 'rol',
+                    align: 'right',
+                    renderer: function (v) {
+                        return utilFormat.Value(v);
+                    }
+                },
+                {
+                    text: 'LB',
+                    dataIndex: 'lb',
+                    align: 'right',
+                    renderer: function (v) {
+                        return utilFormat.Value(v);
+                    }
+                },
+                {
+                    text: 'MB',
+                    dataIndex: 'mb',
+                    align: 'center',
+                    renderer: function (v) {
+                        return utilFormat.Value(v);
+                    }
                 }
             ],
             listeners: {

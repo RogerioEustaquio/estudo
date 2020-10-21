@@ -1,7 +1,7 @@
-Ext.define('App.view.righcharts.ContainerRighCharts', {
+Ext.define('App.view.highcharts.ContainerHighCharts', {
     extend: 'Ext.Container',
     xtype: 'tradingchart',
-    
+    itemId: 'tradingchart',
     requires: [ 
     ],
     
@@ -41,6 +41,11 @@ Ext.define('App.view.righcharts.ContainerRighCharts', {
         var me = this;
 
         me.chart =  Highcharts.chart(el.id, {
+
+                credits:{
+                    enabled: false
+                },
+
                 chart: {
                     type: 'bar'
                 },

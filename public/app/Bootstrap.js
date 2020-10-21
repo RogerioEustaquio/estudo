@@ -12,7 +12,7 @@ Ext.application({
         'Ext.ux.util.Format',
         'App.view.Viewport',
         'App.controller.NfEstoqueController',
-        'App.controller.RighChartsController',
+        'App.controller.HighChartsController',
         'App.controller.TreeController'
     ],
     

@@ -1,8 +1,8 @@
-Ext.define('App.controller.RighChartsController', {
+Ext.define('App.controller.HighChartsController', {
     extend: 'Ext.app.Controller',
 
     requires: [
-        'App.view.righcharts.Main'
+        'App.view.highcharts.Main'
     ],
 
     control: {

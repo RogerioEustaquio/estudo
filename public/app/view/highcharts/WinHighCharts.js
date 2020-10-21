@@ -1,7 +1,7 @@
-Ext.define('App.view.righcharts.WinRighCharts', {
+Ext.define('App.view.highcharts.WinHighCharts', {
     extend: 'Ext.window.Window',
-    xtype: 'WinRighCharts',
-    id: 'WinRighCharts',
+    xtype: 'winhighcharts',
+    id: 'winhighcharts',
     height: Ext.getBody().getHeight() * 0.8,
     width: Ext.getBody().getWidth() * 0.9,
     maximizable: true,
